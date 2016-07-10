@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DevHub
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.9.
@@ -29,3 +30,7 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# dev_hub
+angular2
+>>>>>>> 75250ad273ba45156a0ef742ae77e9c0284cdd82
