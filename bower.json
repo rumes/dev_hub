@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "paper-elements": "^1.0.7",
-    "vaadin-combo-box": "^1.1.1"
+    "vaadin-combo-box": "^1.1.1",
+    "vaadin-grid": "^1.1.0"
   }
 }
