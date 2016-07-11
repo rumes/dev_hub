@@ -25,32 +25,3 @@ html, body {
 paper-scroll-header-panel {
   height: 100%;
 }
-
-#paperDrawerPanel [main] {
-        text-align: center;
-        background-color: var(--google-grey-100);
-      }
-
-      #paperDrawerPanel [drawer] {
-        border-right: 1px solid var(--google-grey-300);
-      }
-
-      #paperDrawerPanel[right-drawer] [drawer] {
-        border-left: 1px solid var(--google-grey-300);
-      }
-
-      paper-button {
-        color: white;
-        margin: 10px;
-        background-color: var(--google-blue-700);
-        white-space: nowrap;
-      }
-
-      button {
-        display: block;
-        line-height: 40px;
-        background-color: transparent;
-        border: none;
-        font-size: 14px;
-        margin: 20px;
-      }
