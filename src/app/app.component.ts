@@ -8,7 +8,9 @@ import { PolymerElement } from '@vaadin/angular2-polymer';
   styleUrls: ['app.component.css'],
   directives: [
     PolymerElement('vaadin-combo-box'),
-    PolymerElement('paper-input')
+    PolymerElement('paper-input'),
+    PolymerElement('paper-scroll-header-panel'),
+    PolymerElement('paper-toolbar')
   ]
 })
 export class AppComponent {

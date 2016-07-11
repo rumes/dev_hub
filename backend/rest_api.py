@@ -15,7 +15,7 @@ def getAllUsers():
   users = mongo.db.user
   output = []
   for s in users.find():
-    output.append({'name' : s['name'], 'e-mail' : s['e-mail'], 'type':s['type']})
+    output.append({'name' : s['name'], 'email' : s['email'], 'type':s['type']})
   return jsonify({'result' : output})
   
 # get one user from user_id
@@ -24,7 +24,7 @@ def getUser(user_id):
   userObj = mongo.db.user
   s = userObj.find_one({'_id' : user_id})
   if s:
-    output = {'name' : s['name'], 'e-mail' : s['e-mail'], 'type':s['type']}
+    output = {'name' : s['name'], 'email' : s['email'], 'type':s['type']}
   else:
     output = "No such name"
   return jsonify({'result' : output})
@@ -34,41 +34,43 @@ def getUser(user_id):
 def updateUser(user_id):
   userObj = mongo.db.user
   s = userObj.find_one({'_id' : user_id})
-  name,email,type = 0
+  name=0
+  email=0
+  type = 0
   if s:
     if(request.json['name']):
         name = request.json['name']
     else:
         name = s['name']
     
-    if(request.json['e-mail']):
-        e-mail = request.json['e-mail']
+    if(request.json['email']):
+        email = request.json['email']
     else:
-        e-mail = s['e-mail']
+        email = s['email']
     
     if(request.json['type']):
         type = request.json['type']
     else:
         type = s['type']
         
-    user_id = userobj.update_many({'_id'}, "$set":{'name': name, 'e-mail': e-mail, 'type':type})
+    user_id = userobj.update_many({'_id'}, {'$set':{'name': name, 'email': email, 'type':type}})
     new_user = userobj.find_one({'_id': user_id })
-    output = {'name' : new_user['name'], 'e-mail' : new_user['e-mail'], 'type':new_user['type']}
+    output = {'name' : new_user['name'], 'e-mail' : new_user['email'], 'type':new_user['type']}
   else:
     output = "No such name"
   
   return jsonify({'result' : output})
 
 # add one user
-@app.route('/users', methods=['POST'])
+@app.route('/user', methods=['POST'])
 def addUser():
   userobj = mongo.db.user
   name = request.json['name']
-  e-mail = request.json['email']
+  email = request.json['email']
   type = request.json['type']
-  user_id = userobj.insert({'name': name, 'e-mail': e-mail, 'type':type})
+  user_id = userobj.insert({'name': name, 'email': email, 'type':type})
   new_user = userobj.find_one({'_id': user_id })
-  output = {'name' : new_user['name'], 'e-mail' : new_user['e-mail'], 'type':new_user['type']}
+  output = {'name' : new_user['name'], 'e-mail' : new_user['email'], 'type':new_user['type']}
   return jsonify({'result' : output})
 
 if __name__ == '__main__':
