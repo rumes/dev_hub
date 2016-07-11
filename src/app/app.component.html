@@ -1,17 +1,37 @@
-<paper-scroll-header-panel _ngcontent-eal-1="" class="flex">   
-    <div id="headerContainer" class="style-scope paper-scroll-header-panel">
-        <div class="bg-container style-scope paper-scroll-header-panel">
-            <div id="condensedHeaderBg" class="style-scope paper-scroll-header-panel"></div>
-            <div id="headerBg" class="style-scope paper-scroll-header-panel"></div>
-        </div>
-        <paper-toolbar role="toolbar" _ngcontent-eal-1="" class="x-scope paper-toolbar-0">
-            <div id="topBar" class="toolbar-tools  style-scope paper-toolbar">
-                <div _ngcontent-eal-1="">Hello World!</div>
-            </div>
-            <div id="middleBar" class="toolbar-tools  style-scope paper-toolbar">
-            </div>
-            <div id="bottomBar" class="toolbar-tools  style-scope paper-toolbar">
-            </div>
+<div>
+    <paper-header-panel class="flex">
+        <paper-toolbar>
+        <div>Hello World!</div>
         </paper-toolbar>
-    </div>
-</paper-scroll-header-panel>
+        <paper-scroll-header-panel class="flex" condenses>
+            <paper-toolbar class="tall">
+
+                <paper-icon-button icon="arrow-back"></paper-icon-button>
+                <div class="spacer"></div>
+                <paper-icon-button icon="search"></paper-icon-button>
+                <paper-button  id="draweropen" paper-drawer-toggle>
+                    <iron-icon icon="more-vert"></iron-icon>
+                </paper-button>
+                <div class="bottom title">Title</div>
+
+            </paper-toolbar>
+            <paper-drawer-panel id="paperDrawerPanel" force-narrow>
+                <div drawer>
+                    <button tabindex="0">Options</button>
+                    <button tabindex="0">Settings</button>
+                    <button tabindex="0" paper-drawer-toggle>Close drawer</button>
+                </div>
+                <div main></div>
+                
+            </paper-drawer-panel>
+            
+            <div class="content">
+
+            <sample-content size="100"></sample-content>
+            
+            </div>
+        </paper-scroll-header-panel>
+    </paper-header-panel>
+    
+</div>
+
