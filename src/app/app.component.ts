@@ -16,31 +16,17 @@ import { PolymerElement } from '@vaadin/angular2-polymer';
     PolymerElement('paper-toolbar'),
     PolymerElement('iron-icon'),
     PolymerElement('paper-icon-button'),
-    PolymerElement('paper-toolbar'),
-    // PolymerElement('iron-component-page')
+    PolymerElement('paper-toolbar')
   ]
 })
 export class AppComponent {
-  title = 'my-project works!';
-  myLabel='Select a number'
-  myValue = '4';
-  myItems = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   
-  constructor(public element: ElementRef) {
-   this.element.nativeElement;
+  constructor() {
   }
+  title = "title";
 
   ngOnInit() {
-     
-    
   }
-
-   
-
-//  toggel() {
-//     //  console.log('ha ha');
-//            this.('')
-//         }
  
  
 }
