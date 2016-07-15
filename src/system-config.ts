@@ -7,12 +7,14 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-    '@vaadin': 'vendor/@vaadin'
+    '@vaadin': 'vendor/@vaadin',
+    'h5webstorage': 'vendor/h5webstorage'
 };
 
 /** User packages configuration. */
 const packages: any = {
-    '@vaadin/angular2-polymer': { main: 'index.js', defaultExtension: 'js' }
+    '@vaadin/angular2-polymer': { main: 'index.js', defaultExtension: 'js' },
+    'h5webstorage': { main: 'index.js', format: 'cjs', defaultExtension: 'js' }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -39,6 +41,7 @@ const barrels: string[] = [
   'app/user',
   'app/video',
   'app/singin',
+  'app/login',
   /** @cli-barrel */
 ];
 

@@ -1,0 +1,7 @@
+<paper-dialog id="dialog" entry-animation="scale-up-animation" exit-animation="fade-out-animation"  withBackdrop>
+      <h2>Sing In</h2>
+      <paper-input label="User name" required auto-validate error-message="needs some text!" #usernameIn></paper-input>
+      <paper-input label="password" type="password" required auto-validate error-message="needs some text!" #passwordIn></paper-input>
+      <paper-button raised class="custom indigo" (click)="singIn(usernameIn.value,passwordIn.value)" >sing in</paper-button>
+      <paper-button raised class="custom green" (click)="singInEx()">cancle</paper-button>
+</paper-dialog> 

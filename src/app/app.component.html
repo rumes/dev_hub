@@ -11,14 +11,7 @@
                 <paper-toolbar class="tall">
                     <paper-icon-button icon="arrow-back"></paper-icon-button>
                     <div class="spacer"></div>
-                    <paper-icon-button icon="social:person-outline" data-dialog="dialog" id="sing_in_dialog" (click)="clickHandler(event)"></paper-icon-button>
-                    <paper-dialog id="dialog" entry-animation="scale-up-animation" exit-animation="fade-out-animation"  withBackdrop>
-                          <h2>Sing In</h2>
-                          <paper-input label="User name" required auto-validate error-message="needs some text!"></paper-input>
-                          <paper-input label="password" type="password" required auto-validate error-message="needs some text!"></paper-input>
-                          <paper-button raised class="custom indigo" (click)="singIn()" >sing in</paper-button>
-                          <paper-button raised class="custom green" (click)="singInEx()">cancle</paper-button>
-                    </paper-dialog>            
+                    <a [routerLink]="['/login']"><paper-icon-button icon="social:person-outline" data-dialog="dialog" id="sing_in_dialog"></paper-icon-button></a>           
                     <paper-icon-button icon="search"></paper-icon-button>
                     <paper-icon-button icon="more-vert" id="draweropen" paper-drawer-toggle></paper-icon-button>
                     <div class="bottom title">Title</div>

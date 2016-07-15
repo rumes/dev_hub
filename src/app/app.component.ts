@@ -1,6 +1,9 @@
 import { Component,ElementRef, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { PolymerElement } from '@vaadin/angular2-polymer';
+import {LoginComponent} from './login/login.component'
+// Add the RxJS Observable operators we need in this app.
+import './rxjs-operators';
 
 @Component({
   moduleId: module.id,
@@ -29,22 +32,9 @@ export class AppComponent {
   constructor() {
   }
   title = "title";
-  dialo_stat = ""
+  dialo_stat = "";
 
   ngOnInit() {
   } 
-
-  clickHandler(e) {
-      var dialog :any = document.getElementById('dialog');
-      dialog.open();     
-    }
-  singInEx(){
-    var dialog :any = document.getElementById('dialog');
-    dialog.close();
-  }
-
-  singIn(){
-
-  }
  
 }
